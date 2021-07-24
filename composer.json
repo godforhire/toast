@@ -1,0 +1,40 @@
+{
+    "name": "godforhire/toast",
+    "description": "Easy toast notifications",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "godforhire"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master",
+        "phpunit/phpunit": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "godforhire\\Toast\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "godforhire\\Toast\\ToastServiceProvider"
+            ],
+            "aliases": {
+                "Toast": "godforhire\\Toast"
+            }
+        }
+    }
+}
