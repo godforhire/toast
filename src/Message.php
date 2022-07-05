@@ -26,6 +26,13 @@ class Message implements \ArrayAccess
     public $level = 'info';
 
     /**
+     * The message delay.
+     *
+     * @var int
+     */
+    public $delay = 5000;
+
+    /**
      * Whether the message should auto-hide.
      *
      * @var bool

@@ -1,6 +1,7 @@
 <?php
 
-if (! function_exists('toast')) {
+if (!function_exists('toast'))
+{
 
     /**
      * Arrange for a toast message.
@@ -13,7 +14,7 @@ if (! function_exists('toast')) {
     {
         $notifier = app('toast');
 
-        if (! is_null($message))
+        if (!is_null($message))
         {
             return $notifier->message($message, $level);
         }

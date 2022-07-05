@@ -146,6 +146,17 @@ class ToastNotifier
     }
 
     /**
+     * Add a different delay to the session. Uses data-bs-delay
+     *
+     * @param int $delay
+     * @return $this
+     */
+    public function delay(int $delay)
+    {
+        return $this->updateLastMessage(['delay' => $delay]);
+    }
+
+    /**
      * Clear all registered messages.
      *
      * @return $this

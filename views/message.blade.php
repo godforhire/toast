@@ -21,7 +21,7 @@ $counter = 100;
                 @php
                     $text_color = ($message['level'] == 'warning') ? 'dark' : 'white';
                 @endphp
-                <div id="toast" class="toast hide bg-{{ $message['level'] }} text-{{ $text_color }} align-items-center p-1" role="alert" aria-live="assertive" aria-atomic="true"@if ($message['important']) data-bs-autohide="false" @else data-bs-delay="{{ 5000 + ($counter -= 250) }}"@endif>
+                <div id="toast" class="toast hide bg-{{ $message['level'] }} text-{{ $text_color }} align-items-center p-1" role="alert" aria-live="assertive" aria-atomic="true"@if ($message['important']) data-bs-autohide="false" @else data-bs-delay="{{ $message['delay'] + ($counter -= 250) }}"@endif>
                     <div class="d-flex">
                         <div class="toast-body">
                             {!! $message['message'] !!}
