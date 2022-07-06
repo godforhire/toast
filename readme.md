@@ -38,6 +38,10 @@ Toast themes follow the Bootstrap contextual classes:
 
 If no class is passed, the default is set to "info".
 
+Except for overlays, toast messages are automatically dismissed after 5 seconds, but if you wish to change this, use the delay method:
+- `toast('Message')->danger()->delay(10000)`
+
+
 Add `important()` to manually dismiss a toast message:
 - `toast('Message')->danger()->important()`
 
@@ -68,7 +72,7 @@ If you need to modify the toast message partials, you can run:
 php artisan vendor:publish --provider="godforhire\Toast\ToastServiceProvider"
 ```
 
-Please refer to the official Bootstrap 5 documentation for positioning the toast messages: https://getbootstrap.com/docs/5.0/components/toasts/
+Please refer to the official Bootstrap 5 documentation for positioning the toast messages: https://getbootstrap.com/docs/5.1/components/toasts/
 
 The two package views will now be located in the `resources/views/vendor/toast/` directory.
 
