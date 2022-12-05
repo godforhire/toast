@@ -23,7 +23,7 @@ $counter = 100;
                         <div class="toast-body">
                             {!! $message['message'] !!}
                         </div>
-                        <button type="button" class="btn-close btn-close-{{ $text_color }} me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                     </div>
                 </div>
             @endforeach
