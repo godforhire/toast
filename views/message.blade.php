@@ -18,10 +18,7 @@ $counter = 100;
     <div aria-live="polite" aria-atomic="true" class="position-ab">
         <div class="toast-container position-fixed top-0 end-0 mt-3 me-3">
             @foreach ($toasts as $message)
-                @php
-                    $text_color = ($message['level'] == 'warning') ? 'dark' : 'white';
-                @endphp
-                <div id="toast" class="toast hide bg-{{ $message['level'] }} text-{{ $text_color }} align-items-center p-1" role="alert" aria-live="assertive" aria-atomic="true"@if ($message['important']) data-bs-autohide="false" @else data-bs-delay="{{ $message['delay'] + ($counter -= 250) }}"@endif>
+                <div id="toast" class="toast hide text-bg-{{ $message['level'] }} align-items-center p-1 mb-2" role="alert" aria-live="assertive" aria-atomic="true"@if ($message['important']) data-bs-autohide="false" @else data-bs-delay="{{ $message['delay'] + ($counter -= 250) }}"@endif>
                     <div class="d-flex">
                         <div class="toast-body">
                             {!! $message['message'] !!}
